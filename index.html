@@ -1,149 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LSPD Air-1 SOP</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Air-1 SOP — LSPD One Life RP</title>
+  <style>
+    :root{
+      --bg:#0b0b0b; 
+      --panel:#120707;
+      --accent:#b71c1c;
+      --muted:#9a9a9a;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    html,body{height:100%;margin:0;background:#0b0b0b;color:#fff}
+    .no-select{user-select:none;-webkit-user-select:none;-moz-user-select:none}
+    header{
+      box-shadow:0 0 18px rgba(183,28,28,0.35);
+      background:#120707;
+      padding:18px 24px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:52px;height:52px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      background:var(--accent);
+      box-shadow:0 0 12px rgba(183,28,28,0.6);
+    }
+    h1{font-size:18px;margin:0;letter-spacing:0.6px}
+    .sub{font-size:12px;color:var(--muted)}
+    nav{margin-left:auto;display:flex;gap:10px}
+    nav a{
+      color:#fff;
+      padding:8px 12px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:13px;
+    }
+    nav a:hover{background:rgba(255,255,255,0.03)}
 
-    <style>
-        body {
-            margin: 0;
-            background: #000;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-        }
+    main{
+      max-width:980px;
+      margin:28px auto;
+      padding:22px;
+      border-radius:12px;
+      background:#120707;
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .meta{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+    .chip{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px}
 
-        header {
-            background: #1a1a1a;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 0 15px red;
-            border-bottom: 2px solid red;
-        }
+    section{padding:12px 0;border-top:1px dashed rgba(255,255,255,0.03)}
+    section h2{margin:6px 0 8px 0;color:var(--accent)}
+    p,li{color:#ddd;line-height:1.55}
+    ul{padding-left:18px}
 
-        header img {
-            width: 60px;
-            height: 60px;
-        }
+    footer{
+      margin-top:28px;
+      padding:18px;
+      border-radius:10px;
+      background:#120707;
+      text-align:center;
+      color:#fff;
+      font-weight:700;
+      font-size:16px;
+      text-shadow: 0 0 10px #b71c1c;
+    }
 
-        header h1 {
-            font-size: 2rem;
-            margin: 0;
-            color: white;
-            text-shadow: 0 0 10px red;
-        }
+    @media (max-width:720px){
+      nav{display:none}
+      header{padding:12px}
+      .logo{width:44px;height:44px}
+      main{margin:14px;padding:16px}
+    }
 
-        nav {
-            background: #0d0d0d;
-            padding: 12px;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            border-bottom: 1px solid red;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
-            transition: 0.2s;
-        }
-
-        nav a:hover {
-            color: red;
-            text-shadow: 0 0 8px red;
-        }
-
-        main {
-            max-width: 1000px;
-            margin: 30px auto;
-            background: #111;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 25px red;
-        }
-
-        h2 {
-            color: red;
-            text-shadow: 0 0 10px red;
-        }
-
-        .termination-warning {
-            font-weight: 900;
-            color: #ff4d4d;
-            text-align: center;
-            font-size: 1.4rem;
-            margin-top: 40px;
-            text-shadow: 0 0 12px #ff0000,
-                         0 0 22px #ff1a1a,
-                         0 0 40px #ff3333;
-        }
-    </style>
+    html{scroll-behavior:smooth}
+  </style>
 </head>
-
-<body>
-
-    <header>
-        <img src="https://i.postimg.cc/ryq7cV2x/helicopterlogo.png" alt="LSPD Aviation Logo">
-        <h1>LSPD Air-1 SOP</h1>
-    </header>
-
+<body oncontextmenu="return false;">
+  <header>
+    <div class="brand">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo" style="width:80%;height:80%;object-fit:contain;border-radius:8px;" />
+      </div>
+      <div>
+        <h1>Air-1 SOP — LSPD Aviation</h1>
+        <div class="sub">Effective: December 2025 • Aviation Division — One Life RP</div>
+      </div>
+    </div>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Sections</a>
-        <a href="#">Aviation Unit</a>
-        <a href="#">Contact Command</a>
+      <a href="#purpose">Purpose</a>
+      <a href="#scope">Scope</a>
+      <a href="#authority">Authority</a>
+      <a href="#rules">General Rules</a>
+      <a href="#radio">Radio Standards</a>
+      <a href="#pursuit">Pursuit Protocol</a>
     </nav>
+  </header>
 
-    <main>
-        <h2>1. PURPOSE</h2>
-        <p>
-            To establish standardized guidelines for the safe, effective, and professional operation of LSPD Air-1 in support of ground units, pursuits, searches, surveillance, and emergency response within One Life.
-        </p>
+  <main>
+    <div class="meta">
+      <div class="chip">Department: Los Santos Police Department</div>
+      <div class="chip">Unit: Air-1 (Aviation)</div>
+      <div class="chip">Author: Dario Bico</div>
+    </div>
 
-        <h2>2. SCOPE</h2>
+    <article id="sop" class="no-select">
+      <h2 id="sop-title">🚁 Air-1 SOP 🚁</h2>
+      <p style="margin-top:6px;color:var(--muted)"><strong>Effective Date:</strong> December 2025<br><strong>Department:</strong> Los Santos Police Department One Life RP – Aviation Division</p>
+
+      <section id="purpose">
+        <h2>1: PURPOSE</h2>
+        <p>To establish standardized guidelines for the safe, effective, and professional operation of LSPD Air-1 in support of ground units, pursuits, searches, surveillance, and emergency response within One Life.</p>
+      </section>
+
+      <section id="scope">
+        <h2>2: Scope</h2>
         <p>Applies to all certified LSPD pilots assigned to Air-1.</p>
+      </section>
 
-        <h2>3. AUTHORITY & CERTIFICATION</h2>
-        <p>
-            Only members with LSPD Aviation Certification (completed Air-1 training and check ride) may pilot a helicopter.
-        </p>
+      <section id="authority">
+        <h2>3: Authority &amp; Certification</h2>
+        <p>Only members with LSPD Aviation Certification may pilot a Helicopter.</p>
+      </section>
 
-        <h2>4. GENERAL RULES</h2>
+      <section id="rules">
+        <h2>4: General Rules</h2>
         <ul>
-            <li>Maintain a professional and calm demeanor on air and main radio channels.</li>
-            <li>No low flying over highly populated areas unless tactically necessary.</li>
-            <li>No hovering directly above civilians for extended periods.</li>
-            <li>No spotlighting or tracking civilians without cause.</li>
-            <li>Announce on duty: “Air-1 is up and available.”</li>
-            <li>No random civilian tracking without suspicion.</li>
-            <li>Do not land in the middle of the road without reason.</li>
+          <li>Air-1 shall maintain a professional and calm demeanor on both air and main radio channels at all times.</li>
+          <li>No low flying over highly populated areas unless tactically necessary.</li>
+          <li>No hovering directly above civilian players for extended periods.</li>
+          <li>Do not engage in pursuits or spotlight players without ground unit request or probable cause.</li>
+          <li>When going on Duty as Air-1 you should announce in radio "Air-1 is up and in the air, and available."</li>
+          <li>Do not track random civilians without reasonable suspicion and ground unit request.</li>
+          <li>Do not Land the Helicopter in the Middle of the Road for no reason.</li>
         </ul>
+      </section>
 
-        <h2>5. RADIO COMMUNICATION STANDARDS</h2>
+      <section id="radio">
+        <h2>5: Radio Commutation Standards</h2>
         <ul>
-            <li>Use proper phonetic alphabet and 10-codes.</li>
-            <li>“Air-1 is overhead [location] with eyes.”</li>
-            <li>“Suspect heading [direction] at high speed.”</li>
-            <li>“Vehicle is now FOOTER heading [direction].”</li>
+          <li>Use proper phonetic alphabet and 10-codes when applicable.</li>
+          <li>Standard call outs:</li>
+          <ul>
+            <li>"Air-1 is overhead [location/incident] with eyes on."</li>
+            <li>"Suspect is [direction of travel], heading [north/south/etc.] at high speed."</li>
+            <li>"Vehicle is now FOOTER, heading [direction]."</li>
+          </ul>
         </ul>
+      </section>
 
-        <h2>6. PURSUIT SUPPORT PROTOCOL</h2>
+      <section id="pursuit">
+        <h2>6: Pursuit Support Protocol</h2>
         <ul>
-            <li>Ground unit must request Air-1.</li>
-            <li>Air-1 becomes primary when overhead.</li>
-            <li>Provide constant updates (speed, direction, traffic conditions).</li>
-            <li>Announce if suspect bails.</li>
-            <li>If ground calls off—Air-1 breaks off unless told otherwise.</li>
+          <li>Ground unit must request Air-1 before joining a pursuit.</li>
+          <li>Air-1 becomes primary unit once overhead and assumes direction of pursuit.</li>
+          <li>Provide continuous location, direction, speed, and traffic conditions.</li>
+          <li>Announce when suspect bails - Suspect is now on foot.</li>
+          <li>If pursuit is called off by ground command, Air-1 will break off unless directed otherwise.</li>
         </ul>
+      </section>
 
-        <p class="termination-warning">
-            Violating this SOP will lead to your Termination of the Aviation Unit.
-        </p>
-    </main>
+      <section id="thermals">
+        <h2>7: Thermal Usage</h2>
+        <ul>
+          <li>Thermals are only permitted when:</li>
+          <ul>
+            <li><b>REQUEST BEFORE USING THERMALS</b></li>
+            <li>Suspect enters water (Must Request)</li>
+            <li>Clean chase is broken (Must Request)</li>
+            <li>Gang Raids (Must Request)</li>
+            <li>Open Scene Shootouts (Must Request)</li>
+          </ul>
+        </ul>
+      </section>
 
+    </article>
+
+    <footer>
+      Violating this SOP will lead to your <strong>Termination of the Aviation Unit</strong>
+    </footer>
+
+  </main>
 </body>
 </html>
