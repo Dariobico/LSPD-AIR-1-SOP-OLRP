@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Air-1 SOP — LSPD One Life RP</title>
+  <style>
+    :root{
+      --bg:#0b0b0b; /* very dark */
+      --panel:#120707; /* deep red-black */
+      --accent:#b71c1c; /* red */
+      --muted:#9a9a9a;
+      --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#070707);color:#fff}
+    /* Disable selection for the main SOP (to deter easy copy) */
+    .no-select{user-select:none;-webkit-user-select:none;-moz-user-select:none}
+    header{box-shadow:0 0 18px rgba(183,28,28,0.35);background:linear-gradient(90deg,rgba(183,28,28,0.12),transparent);backdrop-filter: blur(4px);padding:18px 24px;display:flex;align-items:center;gap:16px;border-bottom:1px solid rgba(183,28,28,0.12)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(180deg,var(--accent),#8e1515);box-shadow:0 6px 20px rgba(183,28,28,0.12)}
+    .logo span{font-size:22px}
+    h1{font-size:18px;margin:0;letter-spacing:0.6px}
+    .sub{font-size:12px;color:var(--muted)}
+    nav{margin-left:auto;display:flex;gap:10px}
+    nav a{color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:13px}
+    nav a:hover{background:rgba(255,255,255,0.03)}
+
+    main{box-shadow:0 0 22px rgba(183,28,28,0.28), 0 10px 30px rgba(0,0,0,0.6);max-width:980px;margin:28px auto;padding:22px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));box-shadow:0 10px 30px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.02)}
+    .meta{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+    .chip{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px}
+
+    section{padding:12px 0;border-top:1px dashed rgba(255,255,255,0.03)}
+    section h2{margin:6px 0 8px 0;color:var(--accent)}
+    p,li{color:#ddd;line-height:1.55}
+    ul{padding-left:18px}
+
+    .cta-row{display:flex;gap:10px;align-items:center;margin-top:18px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04)}
+
+    footer{margin-top:18px;padding:14px;border-radius:10px;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.3));display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:720px){
+      nav{display:none}
+      header{padding:12px}
+      .logo{width:44px;height:44px}
+      main{margin:14px;padding:16px}
+    }
+
+    /* Smooth scroll */
+    html{scroll-behavior:smooth}
+
+    /* Accessibility focus */
+    a:focus{outline:2px solid rgba(183,28,28,0.25);outline-offset:2px}
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <div class="brand">
+      <div class="logo"><img src="https://i.postimg.cc/ZYfrBvJg/image-2025-12-05-120825486.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;border-radius:10px;" /></div>
+      <div>
+        <h1 aria-label="Air-1 SOP">Air-1 SOP — LSPD Aviation</h1>
+        <div class="sub">Effective: December 2025 • Aviation Division — One Life RP</div>
+      </div>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="#purpose">Purpose</a>
+      <a href="#scope">Scope</a>
+      <a href="#authority">Authority</a>
+      <a href="#rules">General Rules</a>
+      <a href="#radio">Radio Standards</a>
+      <a href="#pursuit">Pursuit Protocol</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="meta">
+      <div class="chip">Department: Los Santos Police Department</div>
+      <div class="chip">Unit: Air-1 (Aviation)</div>
+      <div class="chip">Author: Dario Bico</div>
+    </div>
+
+    <!-- SOP content (protected against easy copy via CSS + JS) -->
+    <article id="sop" class="no-select" aria-labelledby="sop-title">
+      <h2 id="sop-title">🚁 Air-1 SOP 🚁</h2>
+      <p style="margin-top:6px;color:var(--muted)"><strong>Effective Date:</strong> December 2025<br><strong>Department:</strong> Los Santos Police Department One Life RP – Aviation Division</p>
+
+      <section id="purpose">
+        <h2>1: PURPOSE</h2>
+        <p>To establish standardized guidelines for the safe, effective, and professional operation of LSPD Air-1 in support of ground units, pursuits, searches, surveillance, and emergency response within One Life.</p>
+      </section>
+
+      <section id="scope">
+        <h2>2: Scope</h2>
+        <p>Applies to all certified LSPD pilots assigned to Air-1.</p>
+      </section>
+
+      <section id="authority">
+        <h2>3: Authority &amp; Certification</h2>
+        <p>Only members with LSPD Aviation Certification (completed Air-1 training and check ride) may pilot a Helicopter.</p>
+      </section>
+
+      <section id="rules">
+        <h2>4: General Rules</h2>
+        <ul>
+          <li>Air-1 shall maintain a professional and calm demeanor on both air and main radio channels at all times.</li>
+          <li>No low flying over highly populated areas unless tactically necessary.</li>
+          <li>No hovering directly above civilian players for extended periods.</li>
+          <li>Do not engage in pursuits or spotlight players without ground unit request or probable cause.</li>
+          <li>When going on Duty as Air-1 you should announce in radio "Air-1 is up and in the air, and available."</li>
+          <li>Do not track random civilians without reasonable suspicion and ground unit request.</li>
+          <li>Do not Land the Helicopter in the Middle of the Road for no reason.</li>
+        </ul>
+      </section>
+
+      <section id="radio">
+        <h2>5: Radio Commutation Standards</h2>
+        <ul>
+          <li>Use proper phonetic alphabet and 10-codes when applicable.</li>
+          <li>Standard call outs:</li>
+          <ul>
+            <li>"Air-1 is overhead [location/incident] with eyes on."</li>
+            <li>"Suspect is [direction of travel], heading [north/south/etc.] at high speed."</li>
+            <li>"Vehicle is now FOOTER, heading [direction]."</li>
+          </ul>
+        </ul>
+      </section>
+
+      <section id="pursuit">
+        <h2>6: Pursuit Support Protocol</h2>
+        <ul>
+          <li>Ground unit must request Air-1 before joining a pursuit.</li>
+          <li>Air-1 becomes primary unit once overhead and assumes direction of pursuit.</li>
+          <li>Provide continuous location, direction, speed, and traffic conditions.</li>
+          <li>Announce when suspect bails - Suspect is now on foot.</li>
+          <li>If pursuit is called off by ground command, Air-1 will break off unless directed otherwise.</li>
+        </ul>
+      </section>
+
+            <section id="thermals">
+        <h2>6: Thermal Usage </h2>
+        <ul>
+          <li>Thermals are only permitted when:</li>
+          <ul>
+            <li><b> REQUEST BEFORE USING THERMALS </b></li>
+            <li> Suspect enters the water (Must Request before using thermals) </li>
+            <li> Clean chase is broken (only the vehicle that broke clean chase) (Must Request before using thermals)  </li>
+            <li> Gang Raids (Must Request before using thermals) </li>
+            <li> Open Scene Shootouts (Must Request before using thermals) </li>
+      </section>
+
+    </article>
+
+    
+
+    <footer>
+      <div>Writen This SOP is Writen by Dario Bico</div>
+      <div style="font-size:12px;color:var(--muted)">© LSPD — One Life RP • Aviation Division</div>
+    </footer>
+  </main>
+
+  <script>
+    // Basic protection: prevent common copy/print shortcuts and right-click already disabled via oncontextmenu
+    document.addEventListener('keydown', function(e){
+      // Block Ctrl/Cmd+C, Ctrl+P, Ctrl+S, Ctrl+U
+      if ((e.ctrlKey || e.metaKey) && ['c','p','s','u'].includes(e.key.toLowerCase())){
+        e.preventDefault();
+        return false;
+      }
+      // Block PrintScreen key (best-effort)
+      if (e.key === 'PrintScreen'){
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Buttons
+    const toggle = document.getElementById('toggle-copy');
+    const download = document.getElementById('download-btn');
+    const printBtn = document.getElementById('print-btn');
+    const sop = document.getElementById('sop');
+
+    // Admin toggle: reveals selection and allows copy/print when activated intentionally.
+    let unlocked = false;
+    toggle.addEventListener('click', ()=>{
+      unlocked = !unlocked;
+      if (unlocked){
+        sop.classList.remove('no-select');
+        toggle.textContent = 'Lock Copy';
+        toggle.style.background = '#444';
+      } else {
+        sop.classList.add('no-select');
+        toggle.textContent = 'Unlock Copy (Admin)';
+        toggle.style.background = '';
+      }
+    });
+
+    // Print button shows a message that printing is disabled (to match request)
+    printBtn.addEventListener('click', ()=>{
+      alert('Printing has been disabled for this SOP.');
+    });
+
+    // Download: create file and download current HTML
+    download.addEventListener('click', ()=>{
+      const blob = new Blob([document.documentElement.outerHTML],{type:'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'Air-1-SOP.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    // Make nav accessible for keyboard users
+    document.querySelectorAll('nav a').forEach(a=>a.addEventListener('keydown', (e)=>{ if(e.key==='Enter') a.click(); }));
+  </script>
+</body>
+</html>
